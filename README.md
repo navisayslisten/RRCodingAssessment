@@ -35,3 +35,10 @@ And it shows.
 Thanks for the assessment. This was a painful and humbling lesson.
 
 Instructions to run both projects are in their respective README files.
+
+Minor variables should be placed in a .env file at the root level beside this README
+```
+DOMAIN=localhost
+ENVIRONMENT=local
+PROJECT_NAME="RRCodingAssessment"
+```
