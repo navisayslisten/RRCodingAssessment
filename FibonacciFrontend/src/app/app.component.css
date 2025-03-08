@@ -1,0 +1,136 @@
+.content {
+  font-size: 24px;
+  max-width: 100%;
+}
+
+#input {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#button {
+  margin-bottom: 10px;
+}
+
+#maxValue {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-right: 3rem;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.form {
+  width: 100%;
+  margin-top: calc(5% + 25px);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  position:fixed;
+  top:0;
+  z-index: 2;
+}
+
+mat-toolbar span {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+mat-sidenav-container {
+  height: calc(100% - 15px);
+  width: 90%;
+}
+
+mat-sidenav {
+  padding-top: 3rem;
+  padding-right: 12%;
+  @media screen and (min-width: 600px) {
+    padding-top: 4rem;
+  }
+  max-height: calc(90% - 25px);
+}
+
+.mat-drawer-container {
+  overflow: auto !important;
+}
+
+.mat-drawer-content {
+  height: calc(100% - 65px);
+}
+
+mat-sidenav-content {
+  max-width: 100%;
+
+  padding-top: 3rem;
+  @media screen and (min-width: 600px) {
+    padding-top: 4rem;
+  }
+}
+
+.mat-mdc-card-content {
+  max-width: 220px;
+  word-wrap: break-word !important;
+  white-space: pre-wrap !important;
+}
+
+.mat-dialog-actions {
+  padding: 8px 0;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 52px;
+  align-items: center;
+
+  margin-bottom: -10px;
+}
+
+.card-container {
+  background: #673ab7;
+  padding: 10px;
+  margin-left: 10rem;
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.mat-mdc-form-field-input-control {
+  height: 30px !important;
+}
+
+table {
+  max-height: calc(100% - 25px);
+  width: 100%;
+  table-layout: fixed;
+}
+
+mat-header-row {
+  width: 100%;
+  justify-content: space-evenly;
+  bottom: 0;
+  position: sticky;
+  z-index: 10;
+}
+
+.mat-mdc-row:nth-child(odd) {
+  background-color: whitesmoke;
+}
+
+.mat-mdc-row:nth-child(even) {
+  background-color: lightsteelblue;
+}
+
+.md-table-row:hover:not(.md-header-row) .md-table-cell{
+  background: unset!important;
+}
+
+
