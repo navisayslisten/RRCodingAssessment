@@ -6,7 +6,7 @@ Sorry to the interviewers that this took me some time to get to. I had a lot on 
 
 Total time worked on:
 - Backend: 1 hour
-- Frontend: 18 hours
+- Frontend: 20 hours
 
 I'm a lot more familiar with python and its quirks, and backend work in general.
 

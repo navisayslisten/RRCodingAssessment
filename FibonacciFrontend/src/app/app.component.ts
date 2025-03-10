@@ -13,23 +13,38 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {RouterOutlet} from "@angular/router";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatIconModule} from "@angular/material/icon";
+import {CdkTableModule} from "@angular/cdk/table";
+import {CdkFixedSizeVirtualScroll, CdkVirtualScrollViewport} from "@angular/cdk/scrolling";
 
 @Component({
-  standalone: true,
+  imports: [
+    HttpClientModule,
+    MatButtonModule,
+    MatCardModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatSidenavModule,
+    MatTableModule,
+    MatToolbarModule,
+    NgIf,
+    ReactiveFormsModule,
+    RouterOutlet,
+    CdkTableModule,
+    CdkVirtualScrollViewport,
+    CdkFixedSizeVirtualScroll,
+  ],
+  providers: [FibonacciService, HttpClient],
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  standalone: true,
   styleUrls: ['./app.component.css'],
-  imports: [HttpClientModule, ReactiveFormsModule, MatCardModule, MatFormFieldModule, MatTableModule, MatIconModule, MatInputModule, MatButtonModule, NgIf, MatToolbarModule, MatSidenavModule, RouterOutlet, MatDialogModule],
-  providers: [FibonacciService, HttpClient]
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   title = 'FibonacciFrontend';
   displayedColumns: string[] = ['index', 'value'];
   fibonacciArray = [];
-
-  constructor(private fibonacciService: FibonacciService) {
-  }
-
   fibonacciForm = new FormGroup({
     nth: new FormControl(1, [
       Validators.required,
@@ -37,8 +52,14 @@ export class AppComponent {
     ])
   })
 
+  constructor(private fibonacciService: FibonacciService) {
+  }
+
   onSubmit(): void {
-    if (this.fibonacciForm.valid && typeof this.fibonacciForm.value.nth === "number" && !isNaN(this.fibonacciForm.value.nth)) {
+    if (this.fibonacciForm.valid
+      && typeof this.fibonacciForm.value.nth === "number"
+      && !isNaN(this.fibonacciForm.value.nth
+      )) {
       this.fetchFibonacci(this.fibonacciForm.value.nth)
     }
   }

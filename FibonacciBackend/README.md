@@ -1,5 +1,16 @@
 # FibonacciBackend
 
+Python v3.11
+
+### To install
+This project uses [Poetry](https://python-poetry.org/docs/). Please install this according to the linked directions.
+
+`poetry install`
+
+Then activate a shell to run commands
+
+`poetry shell`
+
 ### To run the python tests: 
 
 `pytest`
